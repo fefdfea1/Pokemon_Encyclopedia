@@ -21,7 +21,7 @@ export default function PageHeader() {
 const Header = styled.nav`
   display: flex;
   padding: 16px 32px;
-  maatgin-bottom: 16px;
+  margin-bottom: 16px;
   border-bottom: 1px solid #c0c0c0;
 `;
 

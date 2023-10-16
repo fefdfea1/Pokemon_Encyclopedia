@@ -62,7 +62,7 @@ const Item = styled.li`
 
   &:active {
     background-color: yellow;
-    opactiy: 0.8;
+    opacity: 0.8;
     transition: background-color 0s;
   }
 `;
@@ -82,7 +82,7 @@ const Body = styled.section`
   display: flex;
   flex: 1 1 auto;
   justify-content: center;
-  align-items: cetner;
+  align-items: center;
   margin: 8px 0;
 `;
 

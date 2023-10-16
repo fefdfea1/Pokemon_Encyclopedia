@@ -11,7 +11,7 @@ export interface pokemonListResponseType {
   }[];
 }
 
-interface PokemonDetailResponseType {
+export interface PokemonDetailResponseType {
   id: number;
   weight: number;
   height: number;
@@ -61,7 +61,6 @@ export interface PokemonDetailType {
 export const fetchPokemons = async () => {
   const defaultUrl = `https://pokeapi.co/api/v2/pokemon/`;
   const response = await remote.get<pokemonListResponseType>(defaultUrl);
-
   return response.data;
 };
 
@@ -69,11 +68,7 @@ export const fetchPoketmonDetail = async (
   name: string
 ): Promise<PokemonDetailType> => {
   const speciURl = `https://pokeapi.co/api/v2/pokemon/${name}`;
-  const pokemonSpeciesUrl = `https://pokeapi.co/api/v2/pokemon-species/${name}`;
   const response = await remote.get<PokemonDetailResponseType>(speciURl);
-  const speciesResponse = await remote.get<PokemonDetailResponseType>(
-    pokemonSpeciesUrl
-  );
   const detail = response.data;
   return {
     id: detail.id,
