@@ -8,11 +8,6 @@ export default function PageHeader() {
         <Title>
           <Link to={"/"}>Pokémon</Link>
         </Title>
-        <Select>
-          <option value="">Official</option>
-          <option value="">A</option>
-          <option value="">B</option>
-        </Select>
       </Header>
     </div>
   );
@@ -30,11 +25,4 @@ const Title = styled.h1`
   font-size: 32px;
   color: #ffca09;
   text-shadow: -1px 0 blue, 0 2px blue, 1px 0 blue, 0 -1px blue;
-`;
-
-const Select = styled.select`
-  display: flex;
-  margin-left: auto;
-  padding: 8px 12px;
-  border-radius: 8px;
 `;
